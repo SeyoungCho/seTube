@@ -1,0 +1,9 @@
+.detail{
+  display:flex;
+  flex-direction: column;
+  padding:0.7em;
+}
+
+.description{
+  white-space: pre-wrap;
+}
