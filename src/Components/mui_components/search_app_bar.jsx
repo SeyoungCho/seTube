@@ -58,17 +58,19 @@ export default function SearchAppBar(props) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar style={{"backgroundColor":"#000"}}>
-          <img src="/images/logo.png" alt="logo" style={{
-            marginRight:"15px",
-            filter: "drop-shadow(2px 2px 2px #fff)"}}/>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            seTube
-          </Typography>
+          <div style={{display:"flex", "align-items":"center", cursor:"pointer"}} onClick={props.onHome}>
+            <img src="/images/logo.png" alt="logo" style={{
+              marginRight:"15px",
+              filter: "drop-shadow(2px 2px 2px #fff)"}}/>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            >
+              seTube
+            </Typography>
+          </div>
           <Search style={{"flexBasis":"80%"}}>
             <SearchIconWrapper>
               <SearchIcon />

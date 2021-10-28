@@ -35,6 +35,14 @@ function App({ youtube }) {
     });
   }, [youtube, searchInput]);
 
+  const homeClick = useCallback(()=>{
+    setSelectedVideo(null);
+    setSearchInput("");
+    youtube
+      .mostPopular()
+      .then(videos=>setVideos(videos));
+  },[youtube]);
+
   return (
     <React.Fragment>
      <div className={styles.app}>
@@ -42,6 +50,7 @@ function App({ youtube }) {
           searchInput={searchInput} 
           setSearchInput={setSearchInput}
           onSearch={search}
+          onHome={homeClick}
         />
         <section className={styles.content}>
           {selectedVideo && 
