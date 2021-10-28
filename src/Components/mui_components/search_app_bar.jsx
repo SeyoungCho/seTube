@@ -57,8 +57,10 @@ export default function SearchAppBar(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <img src="/images/logo.png" alt="logo" style={{marginRight:"15px"}}/>
+        <Toolbar style={{"backgroundColor":"#000"}}>
+          <img src="/images/logo.png" alt="logo" style={{
+            marginRight:"15px",
+            filter: "drop-shadow(2px 2px 2px #fff)"}}/>
           <Typography
             variant="h6"
             noWrap
@@ -67,11 +69,12 @@ export default function SearchAppBar(props) {
           >
             seTube
           </Typography>
-          <Search>
+          <Search style={{"flexBasis":"80%"}}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
+              style={{"width":"80%"}}
               onChange={ handleInput }
               onKeyPress={(e)=>{
                 if(e.key==='Enter'){
@@ -86,7 +89,7 @@ export default function SearchAppBar(props) {
           <Button 
             variant="contained" 
             endIcon={<SearchIcon />} 
-            style={{marginLeft:"10px"}}
+            style={{marginLeft:"10px", backgroundColor:"#ff0000"}}
             onClick={()=>{
               props.onSearch();
             }}
