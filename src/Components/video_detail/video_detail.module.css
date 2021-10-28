@@ -2,8 +2,31 @@
   display:flex;
   flex-direction: column;
   padding:0.7em;
+
 }
 
 .description{
   white-space: pre-wrap;
+  max-height:43vh;
+  overflow-y: scroll;
+}
+
+
+.description::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+.description::-webkit-scrollbar {
+  width: 6px;
+}
+.description::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.521);
+}
+.description::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
 }
